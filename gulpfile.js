@@ -6,6 +6,7 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync');
 var sourcemaps = require('gulp-sourcemaps');
+var spritesmith = require('gulp.spritesmith');
 
 gulp.task('sass', function () {
     return gulp.src('./src/sass/**/*.scss')
@@ -20,7 +21,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('templates', function () {
-    gulp.src('src/templates/*.jade')
+    gulp.src('./src/templates/*.jade')
         .pipe(jade())
         .pipe(gulp.dest('./www/'))
         .pipe(browserSync.reload({stream: true}));
@@ -34,12 +35,21 @@ gulp.task('browser-sync', function () {
     });
 });
 
-gulp.task('bs-reload', function () {
-    browserSync.reload();
+gulp.task('icons', function() {
+    var spriteData = gulp.src('./src/icons/*.*')
+        .pipe(spritesmith({
+            imgName: 'icons.png',
+            cssName: 'icons.scss',
+            cssFormat: 'scss',
+            imgPath: 'images/icons.png'
+        }));
+
+    spriteData.img.pipe(gulp.dest('./www/images/'));
+    spriteData.css.pipe(gulp.dest('./src/sass/components/'));
 });
 
 gulp.task('default', ['browser-sync', 'sass', 'templates'], function () {
-    gulp.watch('src/sass/**/*.scss', ['sass']);
-    gulp.watch("src/templates/**/*.jade", ['templates']);
-    gulp.watch("./src/*.html").on("change", browserSync.reload);
+    gulp.watch('./src/sass/**/*.scss', ['sass']);
+    gulp.watch('./src/templates/**/*.jade', ['templates']);
+    gulp.watch('./src/*.html').on('change', browserSync.reload);
 });

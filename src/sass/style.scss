@@ -1,6 +1,14 @@
+@import 'components/icons';
 .test {
   display: block;
   :hover {
     color: #fff;
   }
+  &:first-child {
+    margin-bottom: 10px;
+    border: 1px solid;
+    @include sprite($info);
+
+  }
+
 }
