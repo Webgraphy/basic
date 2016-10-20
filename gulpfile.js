@@ -22,7 +22,9 @@ gulp.task('sass', function () {
 
 gulp.task('templates', function () {
     gulp.src('./src/templates/*.jade')
-        .pipe(jade())
+        .pipe(jade({
+            pretty: true
+        }))
         .pipe(gulp.dest('./www/'))
         .pipe(browserSync.reload({stream: true}));
 });
