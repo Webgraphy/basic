@@ -1,0 +1,34 @@
+@font-face {
+	font-family: "svg";
+	src: url('./svg.eot');
+	src: url('./svg.eot?#iefix') format('eot'),
+		url('./svg.woff2') format('woff2'),
+		url('./svg.woff') format('woff'),
+		url('./svg.ttf') format('truetype'),
+		url('./svg.svg#svg') format('svg');
+}
+
+.icon:before {
+	font-family: "svg";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	/* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+	text-decoration: none;
+	text-transform: none;
+}
+
+
+.icon-age:before {
+	content: "\E001";
+}
+
+.icon-date:before {
+	content: "\E002";
+}
+
+.icon-map:before {
+	content: "\E003";
+}
