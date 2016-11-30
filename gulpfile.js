@@ -5,19 +5,13 @@ var jade = require('gulp-jade');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync');
-var sourcemaps = require('gulp-sourcemaps');
-var spritesmith = require('gulp.spritesmith');
-var iconfont = require('gulp-iconfont');
-var iconfontcss = require('gulp-iconfont-css');
 
 gulp.task('sass', function () {
     return gulp.src('./src/sass/**/*.scss')
-        .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 2 version', 'safari 5', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']
         }))
-        .pipe(sourcemaps.write())
         .pipe(gulp.dest('./www/css'))
         .pipe(browserSync.reload({stream: true}));
 });
@@ -37,32 +31,6 @@ gulp.task('browser-sync', function () {
             baseDir: "./www"
         }
     });
-});
-
-gulp.task('icons', function() {
-    var spriteData = gulp.src('./src/icons/png/*.*')
-        .pipe(spritesmith({
-            imgName: 'icons.png',
-            cssName: 'icons.scss',
-            cssFormat: 'scss',
-            imgPath: 'images/icons.png'
-        }));
-
-    spriteData.img.pipe(gulp.dest('./www/images/'));
-    spriteData.css.pipe(gulp.dest('./src/sass/components/'));
-});
-
-gulp.task('svg', function () {
-    gulp.src(['./src/icons/svg/*.svg'])
-        .pipe(iconfontcss({
-            fontName: 'svg',
-            targetPath: 'svg.css'
-        }))
-        .pipe(iconfont({
-            fontName: 'svg',
-            formats: ['ttf', 'eot', 'woff', 'woff2']
-        }))
-        .pipe(gulp.dest('./www/fonts/svg/'));
 });
 
 gulp.task('default', ['browser-sync', 'sass', 'templates'], function () {
