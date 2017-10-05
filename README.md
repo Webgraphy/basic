@@ -1,3 +1,3 @@
 # basic
-node i
+npm i
 gulp
