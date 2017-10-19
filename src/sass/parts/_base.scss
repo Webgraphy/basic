@@ -1,11 +1,12 @@
-$color1: blue;
-$color2: blue;
+$color1: #efac38;
+$color2: #7fbf11;
 
 body {
-	font-family: Arial, sans-serif;
+	font-family: Merriweather, serif;
 	font-weight: 400;
-	font-size: 12px;
+	font-size: 16px;
 	line-height: 20px;
+	background: url('../img/body.jpg') no-repeat;
 }
 a {
   color: $color1;
