@@ -7,6 +7,7 @@ body {
 	font-size: 16px;
 	line-height: 20px;
 	background: url('../img/body.jpg') no-repeat;
+	background-attachment: fixed;
 }
 a {
   color: $color1;
@@ -15,8 +16,14 @@ a:hover {
   text-decoration: none;
 }
 h1 {
-
+	font-family: 'Marck Script', sans-serif;
+	color: $color2;
+	margin: 0 0 30px;
 }
 h2 {
-
+	font-family: 'Marck Script', sans-serif;
+	color: $color2;
+}
+p {
+	margin-bottom: 15px;
 }
