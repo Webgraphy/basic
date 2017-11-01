@@ -1,13 +1,10 @@
-$color1: #efac38;
-$color2: #7fbf11;
+$color1: #fff;
+$color2: #000;
 
 body {
-	font-family: Merriweather, serif;
 	font-weight: 400;
 	font-size: 16px;
-	line-height: 20px;
-	background: url('../img/body.jpg') no-repeat;
-	background-attachment: fixed;
+	line-height: 1.5;
 }
 a {
   color: $color1;
@@ -15,12 +12,13 @@ a {
 a:hover {
   text-decoration: none;
 }
-h1 {
-	font-family: 'Marck Script', sans-serif;
+h1,
+.h1 {
 	color: $color2;
 	margin: 0 0 30px;
 }
-h2 {
+h2,
+.h2{
 	font-family: 'Marck Script', sans-serif;
 	color: $color2;
 }
