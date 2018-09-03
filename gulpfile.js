@@ -5,6 +5,7 @@ var jade = require('gulp-jade');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync');
+var image = require('gulp-image');
 
 gulp.task('sass', function () {
     return gulp.src('./src/sass/**/*.scss')
@@ -23,6 +24,23 @@ gulp.task('templates', function () {
         }))
         .pipe(gulp.dest('./www/'))
         .pipe(browserSync.reload({stream: true}));
+});
+
+gulp.task('images', function () {
+    gulp.src('./images/**/*')
+        .pipe(image({
+            pngquant: true,
+            optipng: false,
+            zopflipng: true,
+            jpegRecompress: false,
+            mozjpeg: true,
+            guetzli: false,
+            gifsicle: true,
+            svgo: true,
+            concurrent: 10,
+            quiet: true // defaults to false
+        }))
+        .pipe(gulp.dest('./newimages'))
 });
 
 gulp.task('browser-sync', function () {
