@@ -1,22 +1,93 @@
 body {
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.5; }
+  line-height: 1.5;
+  font-family: 'Comfortaa', sans-serif; }
 
 a {
-  color: #333; }
+  color: #563d7c; }
 
 a:hover {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #000; }
 
 h1,
 .h1 {
-  color: #000;
+  color: #694d94;
   margin: 0 0 30px; }
 
 h2,
 .h2 {
-  color: #000; }
+  color: #694d94; }
 
 p {
   margin-bottom: 15px; }
+
+.btn.btn-outline-primary {
+  border-color: #563d7c;
+  border-radius: 2px;
+  color: #563d7c;
+  padding: 10px 20px 8px;
+  text-transform: uppercase;
+  font-size: 12px;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important; }
+  .btn.btn-outline-primary:hover {
+    background: #563d7c;
+    color: #fff; }
+  .btn.btn-outline-primary:active, .btn.btn-outline-primary:focus {
+    background: #694d94 !important;
+    color: #fff; }
+
+.form-control {
+  padding: 10px 20px 8px;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border-radius: 2px; }
+  .form-control:focus {
+    border-color: #563d7c; }
+
+.header {
+  padding: 30px 0; }
+
+.nav-main {
+  background: #563d7c;
+  margin-bottom: 30px; }
+  .nav-main .nav-link {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px 50px;
+    color: #fff; }
+    .nav-main .nav-link:hover {
+      background: #694d94; }
+
+.search .btn {
+  border-color: #ced4da; }
+  .search .btn:hover {
+    border-color: #563d7c; }
+
+.search .form-control:focus {
+  border-color: #ced4da; }
+
+.items {
+  background: #fff; }
+  .items .item {
+    border: 1px solid #efefef;
+    margin: 0 0 -1px -1px;
+    padding: 30px 10px 30px;
+    -webkit-transition: all ease 0.4s;
+    transition: all ease 0.4s;
+    text-align: center; }
+    .items .item:hover {
+      border-color: #fff;
+      -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+              box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15); }
+    .items .item .image img {
+      max-height: 200px; }
+    .items .item .title {
+      display: block;
+      margin: 15px 0;
+      font-size: 18px; }
+
+.smoke {
+  width: 100%;
+  height: 300px; }

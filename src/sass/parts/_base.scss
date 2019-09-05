@@ -1,16 +1,19 @@
-$color1: #333;
-$color2: #000;
+$color1: #563d7c;
+$color2: #694d94;
+$color3: #efefef;
 
 body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
+  font-family: 'Comfortaa', sans-serif;
 }
 a {
   color: $color1;
 }
 a:hover {
   text-decoration: none;
+  color: #000;
 }
 h1,
 .h1 {

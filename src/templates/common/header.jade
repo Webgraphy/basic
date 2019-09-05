@@ -1,21 +1,30 @@
 .container
   header.header
-    .row
-      .col
+    .row.align-items-center
+      .col-md-3.col-sm-4.col-6
         a.logo(href="/")
-      .col
-        .address ул. Советская 105 А
-      .col
-        a.phone(href="tel:88009002020") 88009002020
-      .col
-        a.btn.btn-dark(href="#", data-toggle="modal", data-target="#callModal") Обратный звонок
-  nav.nav-main
-    ul.nav.justify-content-center
+          img.img-fluid(src="img/logo.png")
+      .col-md-9.col-sm-8.col-6.d-flex.justify-content-end
+          .d-none.d-sm-block.flex-grow-1
+            .search
+              .input-group
+                input.form-control(type='text', placeholder='Поиск')
+                .input-group-append
+                  button.btn.btn-outline-primary(type='button')
+                    i.fa.fa-search
+          a.btn.btn-outline-primary.ml-3(href="#", data-toggle="modal", data-target="#callModal")
+            span.d-none.d-md-block Написать нам
+            i.d-block.d-md-none.fa.fa-envelope-o &nbsp;
+          a.btn.btn-outline-primary.d-inline-block.d-sm-none.ml-3
+            i.fa.fa-bars
+nav.nav-main
+  .container
+    ul.nav
       li.nav-item
-        a.nav-link.active(href='#') Active
+        a.nav-link.active(href='#') Кальяны
       li.nav-item
-        a.nav-link(href='#') Link
+        a.nav-link(href='#') Табак
       li.nav-item
-        a.nav-link(href='#') Link
+        a.nav-link(href='#') Уголь
       li.nav-item
-        a.nav-link(href='#') Disabled
+        a.nav-link(href='#') Аксессуары

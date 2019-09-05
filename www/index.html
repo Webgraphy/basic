@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Starter Template for Bootstrap</title>
     <meta name="description" content="">
-    <link rel="shortcut icon" href="">
+    <link rel="shortcut icon" href=""><link href="https://fonts.googleapis.com/css?family=Comfortaa|Lora:400i" rel="stylesheet">
     <link rel="stylesheet" href="js/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="js/owl/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="js/fancybox/jquery.fancybox.min.css">
@@ -16,27 +16,44 @@
   <body>
     <div class="container">
       <header class="header">
-        <div class="row">
-          <div class="col"><a href="/" class="logo"></a></div>
-          <div class="col">
-            <div class="address">ул. Советская 105 А</div>
+        <div class="row align-items-center">
+          <div class="col-md-3 col-sm-4 col-6"><a href="/" class="logo"><img src="img/logo.png" class="img-fluid"></a></div>
+          <div class="col-md-9 col-sm-8 col-6 d-flex justify-content-end">
+            <div class="d-none d-sm-block flex-grow-1">
+              <div class="search">
+                <div class="input-group">
+                  <input type="text" placeholder="Поиск" class="form-control">
+                  <div class="input-group-append">
+                    <button type="button" class="btn btn-outline-primary"><i class="fa fa-search"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div><a href="#" data-toggle="modal" data-target="#callModal" class="btn btn-outline-primary ml-3"><span class="d-none d-md-block">Написать нам</span><i class="d-block d-md-none fa fa-envelope-o">&nbsp;</i></a><a class="btn btn-outline-primary d-inline-block d-sm-none ml-3"><i class="fa fa-bars"></i></a>
           </div>
-          <div class="col"><a href="tel:88009002020" class="phone">88009002020</a></div>
-          <div class="col"><a href="#" data-toggle="modal" data-target="#callModal" class="btn btn-dark">Обратный звонок</a></div>
         </div>
       </header>
-      <nav class="nav-main">
-        <ul class="nav justify-content-center">
-          <li class="nav-item"><a href="#" class="nav-link active">Active</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Disabled</a></li>
-        </ul>
-      </nav>
     </div>
+    <nav class="nav-main">
+      <div class="container">
+        <ul class="nav">
+          <li class="nav-item"><a href="#" class="nav-link active">Кальяны</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Табак</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Уголь</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Аксессуары</a></li>
+        </ul>
+      </div>
+    </nav>
     <div class="container">
       <main>
         <h1>Главнаяв</h1>
+        <div class="items">
+          <div class="row no-gutters">
+            <div class="item col-lg-3 col-md-4 col-6"><a href="#" class="image"><img src="img/category-1.png" class="img-fluid"></a><a href="#" class="title">Кальяны</a></div>
+            <div class="item col-lg-3 col-md-4 col-6"><a href="#" class="image"><img src="img/category-2.jpg" class="img-fluid"></a><a href="#" class="title">Табак</a></div>
+            <div class="item col-lg-3 col-md-4 col-6"><a href="#" class="image"><img src="img/category-3.png" class="img-fluid"></a><a href="#" class="title">Уголь</a></div>
+            <div class="item col-lg-3 col-md-4 col-6"><a href="#" class="image"><img src="img/category-4.jpg" class="img-fluid"></a><a href="#" class="title">Аксессуары</a></div>
+          </div>
+        </div>
       </main>
     </div>
     <footer class="footer">
@@ -47,7 +64,7 @@
           <div class="col-md-4"></div>
         </div>
       </div>
-    </footer>
+    </footer><canvas id="fogCanvas" class="smoke"></canvas>
     <div id="callModal" class="modal fade">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -84,6 +101,7 @@
     <script src="js/jquery.inputmask.bundle.js"></script>
     <script src="js/phone.min.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/smoke.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>

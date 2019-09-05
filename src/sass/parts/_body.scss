@@ -1,3 +1,27 @@
 .block {
 
 }
+.items {
+  background: #fff;
+  .item {
+    border: 1px solid $color3;
+    margin: 0 0 -1px -1px;
+    padding: 30px 10px 30px;
+    transition: all ease 0.4s;
+    text-align: center;
+    &:hover {
+      border-color: #fff;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+    }
+    .image {
+      img {
+        max-height: 200px;
+      }
+    }
+    .title {
+      display: block;
+      margin: 15px 0;
+      font-size: 18px;
+    }
+  }
+}
