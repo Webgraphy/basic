@@ -51,8 +51,11 @@ gulp.task('browser-sync', function () {
     });
 });
 
-gulp.task('default', ['browser-sync', 'sass', 'templates'], function () {
-    gulp.watch('./src/sass/**/*.scss', ['sass']);
-    gulp.watch('./src/templates/**/*.jade', ['templates']);
-    gulp.watch('./src/*.html').on('change', browserSync.reload);
+gulp.task('default', gulp.series('browser-sync', 'sass', 'templates'), function () {
+    gulp.watch('./src/sass/**/*.scss', gulp.series('sass'));
+    gulp.watch('./src/templates/**/*.jade', gulp.series('templates'));
+    gulp.watch('./src/*.html').on('change', () => {
+        browserSync.reload();
+        done();
+    });
 });
