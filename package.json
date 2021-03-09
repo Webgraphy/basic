@@ -3,13 +3,9 @@
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-iconfont": "^10.0.3",
-    "gulp-iconfont-css": "^3.0.0",
+    "gulp-file-include": "^2.3.0",
     "gulp-image": "^5.1.0",
-    "gulp-jade": "^1.1.0",
     "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp.spritesmith": "^6.11.0"
+    "gulp-sourcemaps": "^2.6.5"
   }
 }
