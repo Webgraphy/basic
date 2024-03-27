@@ -2,7 +2,7 @@
 
 var gulp = require('gulp');
 var fileinclude = require('gulp-file-include');
-var sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('node-sass'));
 var browserSync = require('browser-sync');
 
 
@@ -14,7 +14,7 @@ function css() {
 }
 
 function templates () {
-    return gulp.src(['./src/templates/index.html'])
+    return gulp.src(['./src/templates/category.html'])
         .pipe(fileinclude({
             prefix: '@@',
             basepath: '@file'
